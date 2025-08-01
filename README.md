@@ -1,7 +1,7 @@
 # TCR-Cube
 Bioinformatics investigation of dual-antigen recognition for the combination of TCR-T and Car-T cell therapies
 
-## Overview
+## 🔬 Overview
 
 1. **Define antigen search space** from CT and membrane gene lists.
 2. **Extract RNA-seq TPM values** from UCSC Toil-processed TCGA/GTEx data.
@@ -10,7 +10,7 @@ Bioinformatics investigation of dual-antigen recognition for the combination of 
 5. **Evaluate performance** on test dataset.
 6. **Visualize top pairs** for presentation and validation.
 
-## Project structure
+## 📁 Project structure
 dual_target_pipeline/ \
 ├── README.md \
 ├── LICENSE \
