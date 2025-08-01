@@ -1,5 +1,5 @@
 # TCR-Cube
-Bioinformatics investigation of dual-antigen recognition for the combination of TCR-T and Car-T cell therapies
+Bioinformatics investigation of dual-antigen recognition for the combination of pHLA and cell surface targeting T-cell therapies
 
 ## 🔬 Overview
 
