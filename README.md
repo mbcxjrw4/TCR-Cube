@@ -18,10 +18,9 @@ dual_target_pipeline/ \
 │   │   └── rna_seq_data.tsv      # (downloaded UCSC Toil TPM) \
 │   └── processed/                # intermediate data \
 ├── scripts/ \
-│   ├── 01_define_antigen_space.R \
-│   ├── 02_extract_expression_data.R \
-│   ├── 03_create_sketches.py \
-│   ├── 04_train_antigen_pairs/ \
+│   ├── 01_extract_expression_data.R \
+│   ├── 02_create_sketches.py \
+│   ├── 03_train_antigen_pairs/ \
 │   │   ├── identify_pairs.R \
 │   │   └── run_all_indications.sh \
 │   ├── 05_test_antigen_pairs/ \
@@ -29,10 +28,6 @@ dual_target_pipeline/ \
 │   │   └── run_all_indications.sh \
 │   └── 06_visualize_antigen_pair.R \
 ├── results/ \
-│   ├── sketches/ \
-│   ├── pair_identification/ \
-│   ├── evaluation/ \
-│   └── figures/ \
 ├── workflow/ \
 │   └── run_pipeline.sh          # (master shell script) \
 └── docs/ \
