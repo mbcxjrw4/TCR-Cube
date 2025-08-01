@@ -253,17 +253,17 @@ data.table::setorder(double.res, db)
 double.res <- double.res[1:10000, ]
 
 ## Result output
-filename <- paste0(processed_data_path, "intermediate/single_ct_antigen.csv")
+filename <- "single_ct_antigen.csv"
 if(!exists(filename)){
     data.table::fwrite(cta.res, file=filename)
 }
 
-filename <- paste0(processed_data_path, "intermediate/single_cellsurface_antigen.csv")
+filename <- "single_cellsurface_antigen.csv"
 if(!exists(filename)){
   data.table::fwrite(csfm.res, file=filename)
 }
 
-filename <- paste0(processed_data_path, "intermediate/dual_antigen.csv")
+filename <- "dual_antigen.csv"
 if(!exists(filename)){
     data.table::fwrite(double.res, file=filename)
 }
