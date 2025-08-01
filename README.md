@@ -3,12 +3,7 @@ Bioinformatics investigation of dual-antigen recognition for the combination of 
 
 ## 🔬 Overview
 
-1. **Define antigen search space** from CT and membrane gene lists.
-2. **Extract RNA-seq TPM values** from UCSC Toil-processed TCGA/GTEx data.
-3. **Subsample with geometric sketching** to balance tissue distribution.
-4. **Identify antigen pairs** with separation of tumor vs normal (DB index).
-5. **Evaluate performance** on test dataset.
-6. **Visualize top pairs** for presentation and validation.
+TCR-T cells can recognise antigens expressed both on the cell surface and in intracellular compartments and TCR-T cell therapy has demonstrated encouraging potential for the treatment of solid tumours. However, cancer cells can resist the treatment by hiding the single target to prevent the recognition and survive, causing recurrence of cancers in patients. These challenges could be addressed by dual targeting strategies, the combination of pHLA and cell surface targeting T-cell therapies. Here we present a bioinformatics approach to identify dual target antigen pairs that address the tumour heterogeneity and antigen escape.
 
 ## 📁 Project structure
 dual_target_pipeline/ \
