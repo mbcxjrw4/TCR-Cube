@@ -22,6 +22,7 @@
 #
 
 MANDATE="/data/input/indication_target.txt"
+OUTPUT_DIR="data/processed/intermediate/"
 
 ###
 # no changes required beyond this point
@@ -51,6 +52,9 @@ EXIT_CODE=$(Rscript identify_pairs.R ${THIS_MANDATE})
 # remove the Rmd file and leave the directory
 rm -r *.R
 cd ..
+
+# move the result to data/processed/intermediate/
+mv -rf ${THIS_MANDATE}/ ${OUTPUT_DIR}/
 
 #log what happened
 END=$(date +%s)
