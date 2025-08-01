@@ -8,8 +8,6 @@ TCR-T cells can recognise antigens expressed both on the cell surface and in int
 ## 📁 Project structure
 dual_target_pipeline/ \
 ├── README.md \
-├── LICENSE \
-├── .gitignore \
 ├── environment.yml               # (for conda env) or renv.lock if using R renv \
 ├── data/ \
 ├── scripts/ \
