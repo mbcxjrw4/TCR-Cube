@@ -1,20 +1,23 @@
 # 01__extract_expression_data.R
 
 # 1. Load the data
+input_data_path <- "data/input/"
+processed_data_path <- "data/processed/"
+
 # CSV file of CT antigen list
-cta <- data.table::fread(file = "data/input/ct_antigens.csv", check.names=FALSE, stringsAsFactors=F)
+cta <- data.table::fread(file = paste0(input_data_path, "ct_antigens.csv"), check.names=FALSE, stringsAsFactors=F)
 
 # CSV file of cell surface marker list
-csfm <- data.table::fread(file = "data/input/membrane_antigens.csv", check.names=FALSE, stringsAsFactors=F)
+csfm <- data.table::fread(file = paste0(input_data_path, "membrane_antigens.csv"), check.names=FALSE, stringsAsFactors=F)
 
 # tsv.gz file of gene id and name
-gene <- data.table::fread(file = "data/input/rna/TOIL-GTEX_TARGET_TCGA-ROW_DATA.tsv.gz", check.names=FALSE, stringsAsFactors=F)
+gene <- data.table::fread(file = paste0(input_data_path, "rna/TOIL-GTEX_TARGET_TCGA-ROW_DATA.tsv.gz"), check.names=FALSE, stringsAsFactors=F)
 
 # TSV file of meta data
-meta <- data.table::fread(file="data/input/rna/TOIL-GTEX_TARGET_TCGA-COLUMN_DATA.tsv", check.names=FALSE, stringsAsFactors=F)
+meta <- data.table::fread(file=paste0(input_data_path, "rna/TOIL-GTEX_TARGET_TCGA-COLUMN_DATA.tsv"), check.names=FALSE, stringsAsFactors=F)
 
 # TSV file of integrated RNAseq data
-rna <- data.table::fread(file="data/input/rna/TOIL-GTEX_TARGET_TCGA-ASSAY_DATA-LOG2TPM.tsv", check.names=FALSE, stringsAsFactors=F)
+rna <- data.table::fread(file=paste0(input_data_path, "rna/TOIL-GTEX_TARGET_TCGA-ASSAY_DATA-LOG2TPM.tsv"), check.names=FALSE, stringsAsFactors=F)
 
 # 2. Data pre-processing
 # 2.1. Antigen searching space
@@ -57,7 +60,7 @@ rna <- rna[, ..feature]
 rna <- merge(meta, rna, by="Sample.ID")
 
 # 3. Result output
-filename <- "data/processed/TCGA_GTEX_integrated_antigen_searching_space_selected.txt"
+filename <- paste0(processed_data_path, "TCGA_GTEX_integrated_antigen_searching_space_selected.txt")
 if(!exists(filename)){
     data.table::fwrite(rna, file=filename)
 }
