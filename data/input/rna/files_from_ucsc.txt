@@ -1,0 +1,6 @@
+Download from UCSC Xena
+https://ucsc-xena.gitbook.io/project/overview-of-features/download-data
+
+TOIL-GTEX_TARGET_TCGA-ROW_DATA.tsv.gz
+TOIL-GTEX_TARGET_TCGA-COLUMN_DATA.tsv
+TOIL-GTEX_TARGET_TCGA-ASSAY_DATA-LOG2TPM.tsv
