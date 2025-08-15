@@ -5,10 +5,10 @@ input_data_path <- "data/input/"
 processed_data_path <- "data/processed/"
 
 # CSV file of CT antigen list
-cta <- data.table::fread(file = paste0(input_data_path, "ct_antigens.csv"), check.names=FALSE, stringsAsFactors=F)
+cta <- data.table::fread(file = paste0(input_data_path, "antigen_searching_space/ct_antigens.csv"), check.names=FALSE, stringsAsFactors=F)
 
 # CSV file of cell surface marker list
-csfm <- data.table::fread(file = paste0(input_data_path, "membrane_antigens.csv"), check.names=FALSE, stringsAsFactors=F)
+csfm <- data.table::fread(file = paste0(input_data_path, "antigen_searching_space/membrane_antigens.csv"), check.names=FALSE, stringsAsFactors=F)
 
 # tsv.gz file of gene id and name
 gene <- data.table::fread(file = paste0(input_data_path, "rna/TOIL-GTEX_TARGET_TCGA-ROW_DATA.tsv.gz"), check.names=FALSE, stringsAsFactors=F)
