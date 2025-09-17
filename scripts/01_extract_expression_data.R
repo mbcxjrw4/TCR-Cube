@@ -1,4 +1,4 @@
-# 01__extract_expression_data.R
+# 01_extract_expression_data.R
 
 # 1. Load the data
 input_data_path <- "data/input/"
