@@ -1,0 +1,33 @@
+name: tcr-cube
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # Core languages
+  - python=3.10
+  - r-base=4.3
+
+  # R packages
+  - r-tidyverse
+  - r-data.table
+  - r-ggplot2
+  - r-optparse          # for command-line args in R
+  - r-dplyr
+  - r-readr
+  - r-reshape2
+
+  # Python packages
+  - pandas
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - scanpy              # optional, if you use for sketching
+  - seaborn
+
+  # Interoperability
+  - rpy2                # lets you run R from Python if needed
+
+  # Utilities
+  - parallel
+  - git
